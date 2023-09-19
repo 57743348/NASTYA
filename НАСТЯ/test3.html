@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Переход по случайному выбору</title>
+  <script>
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function goToRandomPage() {
+      var randomNumber = getRandomInt(1, 2);
+      if (randomNumber === 1) {
+        window.location.href = '1.html';
+      } else {
+        window.location.href = '2.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <img src="card.jpg" alt="Картинка" onclick="goToRandomPage()">
+</body>
+</html>
